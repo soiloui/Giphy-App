@@ -1,0 +1,200 @@
+@import 'config';
+@import 'responsive';
+
+//-------------------- LAYOUT --------------------
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+h1 {
+	text-align: center;
+	padding: 0.5em 0 0.8em 0;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.giphy-content {
+	margin: 0 auto;
+	max-width: 90%;
+	display: flex;
+	flex-direction: column;
+}
+//searching--------
+.giphy-form {
+	padding: 1em;
+	width: fit-content;
+	max-width: 100%;
+	margin-top: 1em;
+
+	label {
+		display: block;
+	}
+}
+
+.giphy-form__bar,
+.giphy-form__options {
+	margin-top: 0.5em;
+	max-width: 90%;
+	display: flex;
+}
+.giphy-form__text-input {
+	padding-left: 0.5em;
+	width: fit-content;
+	max-width: inherit;
+}
+.giphy-form__button {
+	border: 0;
+	padding: 0.2em;
+}
+
+.select-limit {
+	padding: 0.7em;
+}
+
+.page-info {
+	display: flex;
+	align-items: center;
+
+	&__arrow {
+		padding: 0.5em;
+		cursor: pointer;
+		user-select: none;
+		display: flex;
+		align-items: center;
+
+		&--reverse {
+			transform: rotateY(180deg);
+		}
+	}
+}
+
+//results--------
+.count-info {
+	margin-top: 1em;
+}
+.giphy-results {
+	margin: 1em 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.giphy-results__result {
+	object-fit: cover;
+}
+.giphy-results a {
+	position: relative;
+	margin: 0.5em;
+	padding: 0.2em;
+}
+.giphy-results a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	background: $color-prim;
+	transition: opacity 0.3s ease-in-out;
+}
+.giphy-results a:hover::before {
+	opacity: 0.95;
+}
+.giphy-results a::after {
+	content: 'Open in new tab';
+	position: absolute;
+	top: 0;
+	left: 50%;
+
+	opacity: 0;
+
+	color: $color-sec-light;
+	font-size: 1.3rem;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	transition: all 0.5s ease-in-out;
+}
+.giphy-results a:hover::after {
+	opacity: 1;
+	top: 50%;
+}
+
+footer {
+	padding: 1em;
+	width: 100%;
+	text-align: center;
+}
+
+//-------------------- TYPOGRAPHY & STYLIZATION --------------------
+h1 {
+	font-size: 2rem;
+	span {
+		color: $color-sec-light;
+		font-family: inherit;
+	}
+}
+
+.giphy-title {
+	font-size: 1.2rem;
+}
+.giphy-form {
+	background: $color-prim;
+	border-radius: 5px;
+
+	label {
+		color: #fff;
+	}
+}
+
+.giphy-form__text-input {
+	border: 2px solid $color-sec-dark;
+	color: $color-prim;
+
+	&::placeholder {
+		color: inherit;
+		font-size: 0.8rem;
+	}
+}
+.giphy-form__button {
+	color: #fff;
+	background: $color-sec-light;
+	span {
+		font-size: 1.4rem;
+	}
+}
+.select-limit {
+	font-size: 0.9rem;
+	font-family: inherit;
+	background: $color-prim;
+	color: #fff;
+	border: 2px solid $color-sec-dark;
+	border-radius: 5px;
+	-webkit-appearance: none;
+}
+
+.page-info {
+	color: $color-sec-light;
+	p {
+		color: #fff;
+	}
+}
+
+.giphy-results__result {
+	background: $color-prim;
+}
+
+.error-text {
+	span {
+		color: #f00;
+	}
+}
+
+footer {
+	font-size: 0.8rem;
+	background: $color-prim;
+	color: #fff;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Giphy App</title>
+		<link rel="stylesheet" href="./styles/main.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h1>Giphy <span>App</span></h1>
+		</header>
+
+		<main>
+			<article class="giphy-content">
+				<h2 class="giphy-title">Find the gifs you want</h2>
+
+				<form class="giphy-form" id="search-form">
+					<label for="search-string">Type sth you have on mind</label>
+					<div class="giphy-form__bar">
+						<input
+							value="bee"
+							type="text"
+							placeholder="e.g., dog, smile, fruit"
+							id="search-string"
+							class="giphy-form__text-input"
+						/>
+
+						<button type="submit" id="search-button" class="giphy-form__button">
+							<span class="material-icons">
+								search
+							</span>
+						</button>
+					</div>
+					<div class="giphy-form__options">
+						<select id="result-limit" class="select-limit" size="1">
+							<option value="5">5</option>
+							<option value="10" selected>10</option>
+							<option value="20">20</option>
+							<option value="30">30</option>
+						</select>
+
+						<div class="page-info">
+							<div class="page-info__arrow page-info__arrow--reverse" id="prev-page">
+								<span class="material-icons">
+									forward
+								</span>
+							</div>
+
+							<p class="page-info__text">Page 1</p>
+
+							<div class="page-info__arrow" id="next-page">
+								<span class="material-icons">
+									forward
+								</span>
+							</div>
+						</div>
+					</div>
+				</form>
+
+				<p class="count-info"></p>
+
+				<section class="giphy-results" id="giphy-results"></section>
+			</article>
+		</main>
+
+		<footer>
+			<p>Mieczysław Palian 2020</p>
+		</footer>
+
+		<script src="index.js" async defer></script>
+	</body>
+</html>

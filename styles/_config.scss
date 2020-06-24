@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@500&display=swap");
+
+$color-prim: #464d73;
+$color-sec-light: #43d9ae;
+$color-sec-dark: #06bf69;
+$color-accent: #d9a566;
+
+$font-heading: "Rubik", Arial, sans-serif;
+$font-prim: "Karla", Arial, sans-serif;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-prim;
+    color: $color-prim;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-heading;
+}
+
+img {
+    width: 100%;
+}

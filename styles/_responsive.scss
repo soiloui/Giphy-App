@@ -1,0 +1,38 @@
+@media (min-width: 1px) {
+    html {
+        font-size: 13px;
+    }
+    .giphy-results__result {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (min-width: 300px) {
+    html {
+        font-size: 16px;
+    }
+    .giphy-results__result {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 19px;
+    }
+    .giphy-results__result {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1400px) {
+    html {
+        font-size: 22px;
+    }
+    .giphy-results__result {
+        width: 300px;
+        height: 300px;
+    }
+}
